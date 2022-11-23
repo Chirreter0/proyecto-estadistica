@@ -4,15 +4,29 @@
     @include('layouts.navbars.auth.topnav', ['title' => 'Dashboard'])
     <div class="container-fluid py-4">
 
+        <nav class="navbar bg-light rounded-3 ">
+            <div class="container-fluid ">
+                <select class="form-select w-50" aria-label="Default select example">
+                    <option selected disabled>-- Tipo de grafico --</option>
+                    <option value="1">Barras</option>
+                    <option value="2">Lineas</option>
+                    <option value="3">Pastel</option>
+                </select>
+                <select class="form-select w-50" aria-label="Default select example" >
+                    <option selected disabled>-- Periodo academico --</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                </select>
+            </div>
+        </nav>
+
         <div class="row mt-4">
+
             <div class="col-lg-7 mb-lg-0 mb-4">
                 <div class="card z-index-2 h-100">
                     <div class="card-header pb-0 pt-3 bg-transparent">
-                        <h6 class="text-capitalize">Sales overview</h6>
-                        <p class="text-sm mb-0">
-                            <i class="fa fa-arrow-up text-success"></i>
-                            <span class="font-weight-bold">4% more</span> in 2021
-                        </p>
+                        <h6 class="text-capitalize">Lineas</h6>
                     </div>
                     <div class="card-body p-3">
                         <div class="chart">
@@ -24,11 +38,7 @@
             <div class="col-lg-5">
                 <div class="card z-index-2 h-100">
                     <div class="card-header pb-0 pt-3 bg-transparent">
-                        <h6 class="text-capitalize">Sales overview</h6>
-                        <p class="text-sm mb-0">
-                            <i class="fa fa-arrow-up text-success"></i>
-                            <span class="font-weight-bold">4% more</span> in 2021
-                        </p>
+                        <h6 class="text-capitalize">Pastel</h6>
                     </div>
                     <div class="card-body p-3">
                         <div class="chart">
@@ -40,11 +50,7 @@
             <div class="col-lg-7 mb-lg-0 mb-4 mt-4">
                 <div class="card z-index-2 h-100">
                     <div class="card-header pb-0 pt-3 bg-transparent">
-                        <h6 class="text-capitalize">Sales overview</h6>
-                        <p class="text-sm mb-0">
-                            <i class="fa fa-arrow-up text-success"></i>
-                            <span class="font-weight-bold">4% more</span> in 2021
-                        </p>
+                        <h6 class="text-capitalize">Barras</h6>
                     </div>
                     <div class="card-body p-3">
                         <div class="chart">
@@ -73,9 +79,12 @@
 
         var gradientStroke1 = ctx1.createLinearGradient(0, 230, 0, 50);
 
-        gradientStroke1.addColorStop(1, 'rgba(251, 99, 64, 0.2)');
-        gradientStroke1.addColorStop(0.2, 'rgba(251, 99, 64, 0.0)');
-        gradientStroke1.addColorStop(0, 'rgba(251, 99, 64, 0)');
+
+            gradientStroke1.addColorStop(1, 'rgba(251, 99, 64, 0.2)');
+            gradientStroke1.addColorStop(0.2, 'rgba(251, 99, 64, 0.0)');
+            gradientStroke1.addColorStop(0, 'rgba(251, 99, 64, 0)');
+
+
         new Chart(ctx1, {
             type: "line",
             data: {
@@ -86,7 +95,7 @@
                     borderWidth: 0,
                     pointRadius: 0,
                     borderColor: "#fb6340",
-                    backgroundColor: gradientStroke1,
+                    backgroundColor: gradientStroke1 ,
                     borderWidth: 3,
                     fill: true,
                     data: [50, 40, 300, 220, 500, 250, 400, 230, 500],
@@ -118,7 +127,7 @@
                         ticks: {
                             display: true,
                             padding: 10,
-                            color: '#fbfbfb',
+                            color: '#F39C12',
                             font: {
                                 size: 11,
                                 family: "Open Sans",
@@ -137,7 +146,7 @@
                         },
                         ticks: {
                             display: true,
-                            color: '#ccc',
+                            color: '#F39C12',
                             padding: 20,
                             font: {
                                 size: 11,
@@ -160,7 +169,7 @@
                     borderWidth: 0,
                     pointRadius: 0,
                     borderColor: "#fb6340",
-                    backgroundColor: gradientStroke1,
+                    backgroundColor: "#85C1E9" ,
                     borderWidth: 3,
                     fill: true,
                     data: [50, 40, 300, 220, 500, 250, 400, 230, 500],
@@ -192,7 +201,7 @@
                         ticks: {
                             display: true,
                             padding: 10,
-                            color: '#fbfbfb',
+                            color: '#F39C12',
                             font: {
                                 size: 11,
                                 family: "Open Sans",
