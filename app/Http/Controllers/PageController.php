@@ -21,14 +21,14 @@ class PageController extends Controller
         return abort(404);
     }
 
-    public function vr()
+    public function import()
     {
-        return view("pages.virtual-reality");
+        return view("pages.importar");
     }
 
-    public function rtl()
+    public function export()
     {
-        return view("pages.rtl");
+        return view("pages.exportar");
     }
 
     public function profile()
