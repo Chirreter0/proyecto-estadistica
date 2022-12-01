@@ -7,32 +7,33 @@
         <div class="row">
             <div class="col-md-8">
                 <div class="card">
-
+                    <form role="form" method="POST" action={{ route('profile.update') }} enctype="multipart/form-data">
+                        @csrf
                     <div class="card-body">
                         <p class="text-uppercase text-sm">Información del usuario</p>
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="example-text-input" class="form-control-label">Usuario</label>
-                                    <input class="form-control" type="text" value="Admin.Alfonso">
+                                    <input class="form-control" type="text" name="username" value="{{ old('username', auth()->user()->username) }}">
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="example-text-input" class="form-control-label">Correo electronico</label>
-                                    <input class="form-control" type="email" value="alfonsolopez@unitropico.edu.co">
+                                    <input class="form-control" type="email" name="email" value="{{ old('email', auth()->user()->email) }}">
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="example-text-input" class="form-control-label">Nombre</label>
-                                    <input class="form-control" type="text" value="Alfonso">
+                                    <input class="form-control" type="text" name="firstname" value="{{ old('firstname', auth()->user()->firstname) }}">
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="example-text-input" class="form-control-label">Apellido</label>
-                                    <input class="form-control" type="text" value="Lopez">
+                                    <input class="form-control" type="text" name="lastname" value="{{ old('lastname', auth()->user()->lastname) }}">
                                 </div>
                             </div>
                         </div>
@@ -40,7 +41,7 @@
                         <div class="card-header pb-0">
                             <div class="d-flex align-items-center">
                                 <p class="mb-4">*Verificar datos</p>
-                                <button class="btn btn-primary btn-sm ms-auto">Guardar</button>
+                                <button type="submit" class="btn btn-primary btn-sm ms-auto">Guardar</button>
                             </div>
                         </div>
                         <hr class="horizontal dark">
@@ -72,9 +73,8 @@
                                 </div>
                             </div>
                         </div>
-
-
                     </div>
+                    </form>
                 </div>
             </div>
 
