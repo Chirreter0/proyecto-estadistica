@@ -14,10 +14,10 @@ class CreateResumenHistoricoNotasTable extends Migration
     public function up()
     {
         Schema::create('resumen_historico_notas', function (Blueprint $table) {
-            $table->bigInteger('id')->primary();
+            $table->bigInteger('id',true);
             $table->integer('id_programa_resumen');
             $table->string('documento_estudiante', 15);
-            $table->string('nivel', 3)->comment('semestre en el que va estudiante');
+            $table->string('nivel', 5)->comment('semestre en el que va estudiante');
             $table->decimal('promedio', 10, 0);
             $table->string('periodo_academico', 8);
             $table->timestamp('fecha_carga')->nullable();
