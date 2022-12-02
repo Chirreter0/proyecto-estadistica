@@ -31,9 +31,9 @@ class PageController extends Controller
         return view("pages.exportar");
     }
 
-    public function profile()
+    public function acerca()
     {
-        return view("pages.profile-static");
+        return view("pages.acercade");
     }
 
     public function signin()

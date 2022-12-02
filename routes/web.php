@@ -42,7 +42,7 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::get('/exportar', [PageController::class, 'export'])->name('export');
 	Route::get('/profile', [UserProfileController::class, 'show'])->name('profile');
 	Route::post('/profile', [UserProfileController::class, 'update'])->name('profile.update');
-	Route::get('/profile-static', [PageController::class, 'profile'])->name('profile-static');
+	Route::get('/acerca', [PageController::class, 'acerca'])->name('acerca');
 	Route::get('/sign-in-static', [PageController::class, 'signin'])->name('sign-in-static');
 	Route::get('/sign-up-static', [PageController::class, 'signup'])->name('sign-up-static');
 	Route::get('/{page}', [PageController::class, 'index'])->name('page');

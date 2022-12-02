@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\resumen_historico_notas;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
@@ -23,6 +25,11 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('pages.dashboard');
+        //dashboard
+        $doc = DB::table('resumen_historico_notas')->pluck('documento_estudiante');
+        $prom = DB::table('resumen_historico_notas')->pluck('promedio');
+
+
+        return view('pages.dashboard',['doc'=>$doc, 'prom'=>$prom] );
     }
 }
