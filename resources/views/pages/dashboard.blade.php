@@ -63,6 +63,7 @@
 
 
 
+
         <div class="row mt-4">
 
         @include('layouts.footers.auth.footer')
@@ -75,10 +76,6 @@
         var ctx1 = document.getElementById("chart-line").getContext("2d");
         var ctx2 = document.getElementById("chart-bar").getContext("2d");
         var ctx3 = document.getElementById("chart-pie").getContext("2d");
-
-        var lbl = JSON.parse('{!! json_encode($doc) !!}');
-        var dta = JSON.parse('{!! json_encode($prom) !!}');
-
 
         var gradientStroke1 = ctx1.createLinearGradient(0, 230, 0, 50);
 
@@ -165,9 +162,9 @@
         new Chart(ctx2, {
             type: "bar",
             data: {
-                labels: lbl,
+                labels: ["Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
                 datasets: [{
-                    label: "Mobil2",
+                    label: "Mobil5",
                     tension: 0.4,
                     borderWidth: 0,
                     pointRadius: 0,
@@ -175,7 +172,7 @@
                     backgroundColor: "#85C1E9" ,
                     borderWidth: 3,
                     fill: true,
-                    data: dta,
+                    data: [50, 40, 300, 220, 500, 250, 400, 230, 500],
                     maxBarThickness: 6
 
                 }],

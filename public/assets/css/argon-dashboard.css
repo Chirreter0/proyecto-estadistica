@@ -73,6 +73,66 @@
   }
 }
 
+
+
+
+container {
+    overflow: hidden;
+}
+
+filterDiv {
+    display: none; /* Hidden by default */
+}
+
+/* The "show" class is added to the filtered elements */
+show {
+    display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 body {
   margin: 0;
   font-family: var(--bs-body-font-family);
