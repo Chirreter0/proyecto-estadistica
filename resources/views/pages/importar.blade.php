@@ -27,11 +27,11 @@
             <div class="card">
 
                 <div class="card-body">
-                    <p class="text-uppercase text-sm">Excel</p>
+                    <p class="text-uppercase text-sm">Documento</p>
                     <div class="row">
                         <div class="col-md-11">
                             <div class="form-group">
-                                <label for="example-text-input" class="form-control-label">Importar desde Excel</label>
+                                <label for="example-text-input" class="form-control-label">Importar desde .xlsx .xlsm .xml .csv .tsv</label>
                                 <form action="{{route('importarfile')}}" method="post" enctype="multipart/form-data">
                                     @csrf
                                     <input type="file" name="file" id="file" class="form-control">
@@ -43,23 +43,11 @@
                     </div>
                     <hr class="horizontal dark">
 
-                    <p class="text-uppercase text-sm">CVS</p>
-                    <div class="row">
-                        <div class="col-md-11">
-                            <div class="form-group">
-                                <label for="example-text-input" class="form-control-label">Importar desde CVS</label>
-                                <form action="" method="post" enctype="multipart/form-data">
-                                    @csrf
-                                    <input type="file" name="file" id="file" class="form-control">
-                                    <hr class="horizontal white">
-                                    <button type="submit" class="btn btn-primary btn-sm ms-auto">Importar</button>
-                                </form>
-                            </div>
-                        </div>
 
-                    <hr class="horizontal dark">
+
+
                         <div class="card-footer pb-0">
-                            <p>*verificar extensión</p>
+                            <p>*no importar PDF</p>
                         </div>
                     </div>
             </div>

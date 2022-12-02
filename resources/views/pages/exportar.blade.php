@@ -27,39 +27,39 @@
                 <div class="card">
 
                     <div class="card-body">
-                        <p class="text-uppercase text-sm">PDF</p>
+                        <p class="text-uppercase text-sm">Excel</p>
                         <div class="row">
                             <div class="col-md-11">
                                 <div class="form-group">
-                                    <label for="example-text-input" class="form-control-label">Importar desde Excel</label>
+                                    <label for="example-text-input" class="form-control-label">Formato 1</label>
                                     <form action="" method="post" enctype="multipart/form-data">
                                         @csrf
                                         <input type="file" name="file" id="file" class="form-control">
                                         <hr class="horizontal white">
-                                        <button class="btn btn-primary btn-sm ms-auto">Importar</button>
+                                        <button class="btn btn-primary btn-sm ms-auto">Descargar</button>
                                     </form>
                                 </div>
                             </div>
                         </div>
                         <hr class="horizontal dark">
 
-                        <p class="text-uppercase text-sm">PNG</p>
+                        <p class="text-uppercase text-sm">Word</p>
                         <div class="row">
                             <div class="col-md-11">
                                 <div class="form-group">
-                                    <label for="example-text-input" class="form-control-label">Importar desde CVS</label>
+                                    <label for="example-text-input" class="form-control-label">Formato 2</label>
                                     <form action="" method="post" enctype="multipart/form-data">
                                         @csrf
                                         <input type="file" name="file" id="file" class="form-control">
                                         <hr class="horizontal white">
-                                        <button class="btn btn-primary btn-sm ms-auto">Importar</button>
+                                        <button class="btn btn-primary btn-sm ms-auto">Descargar</button>
                                     </form>
                                 </div>
                             </div>
 
                             <hr class="horizontal dark">
                             <div class="card-footer pb-0">
-                                <p>*verificar Graficas</p>
+                                <p>*verificar datos</p>
                             </div>
                         </div>
                     </div>

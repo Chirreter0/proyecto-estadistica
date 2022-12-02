@@ -14,9 +14,8 @@
                 </select>
                 <select class="form-select w-50" aria-label="Default select example" >
                     <option selected disabled>-- Periodo academico --</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
+                    <option value="1">2022 A</option>
+                    <option value="2">2022 B</option>
                 </select>
             </div>
         </nav>
@@ -83,7 +82,7 @@
         var gradientStroke1 = ctx1.createLinearGradient(0, 230, 0, 50);
 
 
-            gradientStroke1.addColorStop(1, 'rgba(251, 99, 64, 0.2)');
+            gradientStroke1.addColorStop(1, 'rgba(106,255,109,0.35)');
             gradientStroke1.addColorStop(0.2, 'rgba(251, 99, 64, 0.0)');
             gradientStroke1.addColorStop(0, 'rgba(251, 99, 64, 0)');
 
@@ -91,17 +90,17 @@
         new Chart(ctx1, {
             type: "line",
             data: {
-                labels: ["Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+                labels: ["Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic"],
                 datasets: [{
-                    label: "Mobile apps",
+                    label: "consultas",
                     tension: 0.4,
                     borderWidth: 0,
                     pointRadius: 0,
-                    borderColor: "#fb6340",
+                    borderColor: "#1cab06",
                     backgroundColor: gradientStroke1 ,
                     borderWidth: 3,
                     fill: true,
-                    data: [50, 40, 300, 220, 500, 250, 400, 230, 500],
+                    data: [5, 4, 30, 22, 50, 25, 40, 23, 50],
                     maxBarThickness: 6
 
                 }],
@@ -130,7 +129,7 @@
                         ticks: {
                             display: true,
                             padding: 10,
-                            color: '#F39C12',
+                            color: '#469c27',
                             font: {
                                 size: 11,
                                 family: "Open Sans",
@@ -149,7 +148,7 @@
                         },
                         ticks: {
                             display: true,
-                            color: '#F39C12',
+                            color: '#606060',
                             padding: 20,
                             font: {
                                 size: 11,
@@ -171,12 +170,12 @@
                     tension: 0.4,
                     borderWidth: 0,
                     pointRadius: 0,
-                    borderColor: "#fb6340",
-                    backgroundColor: "#85C1E9" ,
+                    borderColor: "#03ad4e",
+                    backgroundColor: gradientStroke1 ,
                     borderWidth: 3,
                     fill: true,
                     data: dta,
-                    maxBarThickness: 6
+                    maxBarThickness: 10
 
                 }],
             },
@@ -204,7 +203,7 @@
                         ticks: {
                             display: true,
                             padding: 10,
-                            color: '#F39C12',
+                            color: '#469c27',
                             font: {
                                 size: 11,
                                 family: "Open Sans",
@@ -223,7 +222,7 @@
                         },
                         ticks: {
                             display: true,
-                            color: '#ccc',
+                            color: '#5e5e5e',
                             padding: 20,
                             font: {
                                 size: 11,
@@ -239,17 +238,17 @@
         new Chart(ctx3, {
             type: "pie",
             data: {
-                labels: ["Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+                labels: ["hombres", "mujeres",],
                 datasets: [{
                     label: "Mobile apps",
                     tension: 0.4,
                     borderWidth: 0,
                     pointRadius: 0,
-                    borderColor: "#fb6340",
-                    backgroundColor: gradientStroke1,
+                    borderColor: "#05a406",
+                    backgroundColor: "rgba(66,225,67,0.49)",
                     borderWidth: 3,
-                    fill: true,
-                    data: [50, 40, 300, 220, 500, 250, 400, 230, 500],
+                    fill: false,
+                    data: [400, 500],
                     maxBarThickness: 6
 
                 }],
@@ -260,6 +259,7 @@
                 plugins: {
                     legend: {
                         display: false,
+
                     }
                 },
                 interaction: {
@@ -271,14 +271,14 @@
                         grid: {
                             drawBorder: false,
                             display: true,
-                            drawOnChartArea: true,
+                            drawOnChartArea: false,
                             drawTicks: false,
                             borderDash: [5, 5]
                         },
                         ticks: {
-                            display: true,
+                            display: false,
                             padding: 10,
-                            color: '#fbfbfb',
+                            color: '#c9c9c9',
                             font: {
                                 size: 11,
                                 family: "Open Sans",
@@ -296,7 +296,7 @@
                             borderDash: [5, 5]
                         },
                         ticks: {
-                            display: true,
+                            display: false,
                             color: '#ccc',
                             padding: 20,
                             font: {
