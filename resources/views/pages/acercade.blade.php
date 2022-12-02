@@ -9,7 +9,7 @@
                 <div class="card">
                         <div class="card-body">
                             <p class="font-mono">
-                                Tiene como objetivo...
+                                Tiene como objetivoz...
                             </p>
                             <hr class="horizontal dark">
 
