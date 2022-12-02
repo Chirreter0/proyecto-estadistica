@@ -75,6 +75,21 @@
                             </div>
                         </div>
                     </form>
+
+
+                    <hr class="horizontal dark">
+
+                    <form role="form" method="get" action={{ route('change-password') }} enctype="multipart/form-data">
+                        @csrf
+                        @method('post')
+                    <div class="card-header pb-0">
+                        <div class="d-flex align-items-center">
+                            <p class="mb-4">Redireccionar para actualizar contraseña</p>
+                            <button type="submit" class="btn btn-primary btn-sm ms-auto">Actualizar contraseña</button>
+                        </div>
+                    </div>
+                    </form>
+
                 </div>
             </div>
 
@@ -126,6 +141,9 @@
                 </div>
             </div>
         </div>
+
+    </div>
+    <div class="row mt-4">
         @include('layouts.footers.auth.footer')
     </div>
 @endsection

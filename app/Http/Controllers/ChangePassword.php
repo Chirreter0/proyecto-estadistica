@@ -37,7 +37,7 @@ class ChangePassword extends Controller
             $existingUser->update([
                 'password' => $attributes['password']
             ]);
-            return redirect('login');
+            return redirect('/');
         } else {
             return back()->with('error', 'Your email does not match the email who requested the password change');
         }
