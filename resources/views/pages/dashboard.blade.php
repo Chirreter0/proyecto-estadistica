@@ -167,7 +167,7 @@
             data: {
                 labels: lbl,
                 datasets: [{
-                    label: "Mobile apps",
+                    label: "Mobile",
                     tension: 0.4,
                     borderWidth: 0,
                     pointRadius: 0,
