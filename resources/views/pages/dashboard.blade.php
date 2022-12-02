@@ -167,7 +167,7 @@
             data: {
                 labels: lbl,
                 datasets: [{
-                    label: "Mobil",
+                    label: "Mobil2",
                     tension: 0.4,
                     borderWidth: 0,
                     pointRadius: 0,
